@@ -5,7 +5,7 @@ pipeline {
         stage('Step1') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'src']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/HarryMarch/test-jenkins']]])
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     export TEST1
                     export TEST2
 
