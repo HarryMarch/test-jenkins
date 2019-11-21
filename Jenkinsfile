@@ -9,6 +9,9 @@ pipeline {
                     export TEST1
                     export TEST2
 
+                    chmod +x src/execute.sh
+                    chmod +x src/compile.sh
+
                     src/execute.sh src/
                 '''
 
