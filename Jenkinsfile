@@ -20,9 +20,10 @@ pipeline {
         // }
         stage('Step1') {
             when {
-                not {
-                    expression { return params.GERRIT_REFNAME ==~ /refs\/tags\/release\/.*/ }
-                }
+                // not {
+                //     expression { return params.GERRIT_REFNAME ==~ /refs\/tags\/release\/.*/ }
+                // }
+                expression { JOB_NAME == 'test-pipeline' }
             }
             steps {
                 echo JOB_NAME
