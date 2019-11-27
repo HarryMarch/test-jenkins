@@ -25,7 +25,7 @@ pipeline {
                 }
             }
             steps {
-                echo $JOB_NAME
+                echo 'test'
             }
         }
     }
