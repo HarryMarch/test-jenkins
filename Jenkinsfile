@@ -25,7 +25,7 @@ pipeline {
                 }
             }
             steps {
-                echo 'test'
+                echo JOB_NAME
             }
         }
     }
